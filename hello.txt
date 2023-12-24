@@ -1,2 +1,4 @@
 I have propperly accessed the repo on vs code!
 Hello World :)
+
+This app/website is based arount the doyouwannagooutwithme website, which was designed by @elifgazioglu and @yavuzkoca
