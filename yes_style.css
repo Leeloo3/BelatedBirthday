@@ -1,23 +1,13 @@
 body {
+    margin: 0;
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #F8C8DC;
-}
-
-/* Position the "No" button absolutely within body */
-#noButton {
-    position: absolute;
-    margin-left: 150px;
-    transition: 0.5s;
-    /* Smooth movement */
-}
-
-#yesButton {
-    position: absolute;
-    margin-right: 150px;
-    /* Smooth movement */
 }
 
 .header_text {
@@ -40,36 +30,72 @@ body {
     margin-bottom: 0px;
 }
 
-.buttons {
+/* .gif_container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
-    /* optional: adds some space between the buttons */
-}
+} */
 
-.btn {
-    background-color: #FFB6C1;
-    color: white;
-    padding: 15px 32px;
+.container {
     text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #FAF9F6;
+    margin: auto;
+    align-self: flex-end; /* Align to the bottom of the flex container */
+    height: 100vh;
 }
 
 .gif_container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-self: flex-end; /* Align to the bottom of the flex container */
+    height: 100vh;
     align-items: center;
+    flex: 1;
+}
+
+.gif_container img {
+    max-width: 100%;
+    max-height: 100%;
+    
+    /* animation-timeline: 600ms; */
+}
+
+.left-side {
+    animation: bobble 4s infinite ease-in-out;
+    /* animation: wobble 5s linear infinite; */
+}
+
+.middle {
+    animation: bobble 3.25s infinite ease-in-out;
+}
+
+.right-side {
+    animation: bobble 2.5s infinite ease-in-out;
+}
+
+.bottom-center {
+    height: 800px;
+    margin-bottom: -175px;
+    /* animation: bobble 2s infinite ease-in-out; */
+    /* animation: wobble 5s linear infinite; */
+}
+
+@keyframes bobble {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+}
+
+@keyframes wobble {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
 }
