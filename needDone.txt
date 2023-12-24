@@ -1,0 +1,7 @@
+Need done:
+- Fix cursor issue in secret.html.
+- extract css/javascript from secret.html.
+- modularize all the code.
+- add comments to break down code and better understand.
+- clean up code.
+- deploy code.
